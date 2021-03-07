@@ -1,0 +1,854 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[11pt]{article}
+% use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} 
+% set input encoding (not needed with XeLaTeX)
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} 
+% to change the page dimensions
+\geometry{a4paper} 
+% or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+% read geometry.pdf for detailed page layout information
+
+\usepackage{chemfig}
+\usepackage{graphicx} 
+% support the \includegraphics command and options
+% \usepackage[parfill]{parskip} 
+% Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs}   % for much better looking tables
+\usepackage{array}      % for better arrays (eg matrices) in maths
+\usepackage{paralist}   % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim}   % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig}     % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy}     % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt}
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+% \allsectionsfont{\sffamily\mdseries\upshape} 
+% (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+% \usepackage[notlof,notlot]{tocbibind} 
+% Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft}
+% Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} 
+
+%%% END Article customizations
+
+%%% DOCUMENT CONTENT
+\title{\textbf{ 
+  Nomenclature of Organic Compounds
+  }}
+\author{\emph{@yang-z}}
+\date{} % Activate to display a given date or no date (if empty),
+        % otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+\setlength{\parskip}{0.8 \baselineskip}
+
+\section{Contribution}
+
+This document is licensed under \textbf{GPLv3}. And is compiled with \textbf{MikTeX}.
+The source code is avaliable on https://github.com/xornent/docs/ location \textbf{chem.org/nomenclature}.
+Contribution to the document and error report by \textbf{Issues} are welcomed.
+
+\section{Number Prefix}
+
+\begin{table}[htbp]
+	\centering
+	\caption{Universal Number Prefixes}
+	\begin{tabular}{cc|cc|cc}
+		\toprule 
+		Index & Expression & Index & Expression & Index & Expression \\
+		\midrule 
+		 1 &   (mono) &  2 &     di &  3 &      tri \\
+		 4 &   tetra &  5 &   penta &  6 &    hexa \\
+		 7 &   hepta &  8 &    octa &  9 &    nona \\
+	    10 &    deca & 11 &  undeca & 12 &  dodeca \\   
+    \toprule
+    \end{tabular}
+\end{table}
+
+For carbon atoms in a chain less than 10:
+\begin{table}[htbp]
+	\centering
+	\caption{Table of Carbon Number Prefixes}
+	\begin{tabular}{cc|cc|cc}
+		\toprule 
+		Index & Expression & Index & Expression & Index & Expression \\
+		\midrule 
+		 1 &    meth &  2 &     eth &  3 &    prop \\
+		 4 &    buta &  5 &   penta &  6 &    hexa \\
+		 7 &   hepta &  8 &    octa &  9 &    nona \\
+	    10 &    deca & 11 &  undeca & 12 &  dodeca \\   
+    \toprule
+    \end{tabular}
+\end{table}
+
+When there are more than 10 carbon atoms in a chain, the ones place of the number is 
+expressed first, then the tens place. There are minor changes to the expression for
+digits at ones place (Table 2), and for those on tens place (Table 3). However, it is
+exceptional for number 11 (as undeca).
+
+\begin{table}[htbp]
+	\centering
+	\caption{Digits at Ones Place in Numbers Greater Than 10}
+	\begin{tabular}{cc|cc|cc}
+		\toprule 
+		Index & Expression & Index & Expression & Index & Expression \\
+		\midrule 
+		 1 &     hen &  2 &      do &  3 &     tri \\
+		 4 &   tetra &  5 &   penta &  6 &    hexa \\
+		 7 &   hepta &  8 &    octa &  9 &    nona \\
+    \toprule
+    \end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+	\centering
+	\caption{Digits at Tens Place}
+	\begin{tabular}{cccrrr}
+		\toprule 
+		Index & Expressing Itself & Prefix & +1 & +2 & +3    \\
+		\midrule 
+		 1 &      deca &   deca &    undeca &  dodeca & trideca \\
+		 2 &    eicosa &   cosa & heneicosa &  docosa & tricosa \\
+		 3 & triaconta & triaconta & hentriaconta & dotriaconta & tritriaconta \\
+		 4 & tetraconta & tetraconta & hentetraconta & dotetraconta & tritetraconta \\
+		... & ... & ... & ... & ... & ... \\
+    \toprule
+    \end{tabular}
+\end{table}
+
+\section{Relative Positioning}
+
+Some prefixes are used to identify the relative position of specified functional groups,
+spatial isomers, and common names for organic compounds 
+
+\begin{table}[htbp]
+	\centering
+	\caption{List of Relative Positioning}
+	\begin{tabular}{ll}
+		\toprule 
+		Prefix & Descriptions \\
+		\midrule 
+        iso			&	Isotetrane: \(CH_{3}CHCH_{3}CH_{3}\) \\
+		neo			&	Neopentane: \(C(CH_3)_4\) \\
+
+		\textbf{Relative Positions} & \\
+		ortho (o-)	&	Indicating the two functional groups are adjacent in a ring \\
+		meta (m-)	&	The two functional groups was separated \\
+		para (p-)	&	The two functional groups are at their opposite, especially\\ & in an aromatic compound \\
+		primary		&	An atom connecting to just one carbon atom \\
+		secondary (sec-) & An atom connecting to two carbon atoms \\
+		tertiary (tert-) & An atom connecting to three carbon atoms \\
+		quaternary	&	An atom connecting four carbon atoms \\
+
+		\textbf{Geometric Isomerism} & \\
+		cis 		&	\\
+		trans		&	\\
+    \toprule
+    \end{tabular}
+\end{table}
+
+\section{Hydrocarbons}
+\subsection{Acyclic Hydrocarbons}
+
+Get the number of carbon atoms in the hydrocarbons, and check for its number prefix.
+Alkane names are the number prefixes (or with their modifers) plus -ane. Alkene name
+suffix is -ene, and alkyne name suffix is -yne. You should omit the last letter 
+\textbf{a} if the prefix ends with one.
+
+\begin{table}[htbp]
+	\centering
+	\caption{Naming Main Chains of Hydrocarbons}
+	\begin{tabular}{cclll}
+		\toprule 
+		Carbon Numbers & Prefix & Alkanes & Alkenes & Alkynes \\
+		\midrule 
+        1   & Meth- & Methane & - & - \\
+		2	& Eth-  & Ethane & Ethene & Ethyne (Common Name: Acetylene) \\
+		3	& Prop- & Propane & Propene & Propyne \\
+		4	& Buta- & Butane & Butene & Butyne \\
+    \toprule
+    \end{tabular}
+\end{table}
+
+For compounds with more than one double bonds or triple bonds, the corresponding
+alkenes and alkynes have suffixes like \textbf{Universal Number Prefix (Mono omitted)
+ - Functional Group Suffix }. 
+
+\begin{table}[htbp]
+	\centering
+	\caption{Hydrocarbons with Multiple Functional Groups}
+	\begin{tabular}{cll}
+		\toprule 
+		Functional Groups & Alkenes & Alkynes \\
+		\midrule 
+        1   & -ene & -yne \\
+		2   & -diene & -diyne \\
+		3	& -triene & -triyne \\
+		... & ... & ... \\
+    \toprule
+    \end{tabular}
+\end{table}
+
+\subsection{Alicyclic Hydrocarbons}
+
+Alicyclic hydrocarbons are named with prefix cyclo- plus the name of the corresponding
+acyclic hydrocarbons. For example, \(C_{6}H_{14}\) \textbf{Hexane} becomes
+\(C_{6}H_{12}\) \textbf{Cyclohexane}.
+
+\subsection{Hydrocarbons as Functional Groups}
+
+Replacing the -ne ending of hydrocarbons to -yl to express hydrocarbons as functional
+groups, and to express hydrocarbons with branched chains. For example, \(CH_{4}\) 
+\textbf{Methane} becomes \(CH_{3}-\) \textbf{Methyl-}, \(CH_2=CH_2\) \textbf{Ethene}
+becomes \(CH_2=CH-\) \textbf{Ethenyl}, and \textbf{-yne} becomes \textbf{-ynyl}.
+
+\subsection{Hydrocarbons with Branched Chains}
+
+Make the longest branch as the main chain, and to choose the orientation to mark The
+index of carbons in the main chain, which makes the sum of all branched chain index
+to be smallest. \textbf{(The same as Chinese nomenclature)}
+
+Note that \textbf{the arrangement of the functional groups and branched chains are
+according to the ascending alphabetical order, but not the size of the chain which
+applied in Chinese nomenclature}. (When evaluating the sequence, we should not take
+number prefixes into consideration, so \textbf{-Ethyl} is previous than \textbf{-Dimethyl})
+
+\begin{table}[htbp]
+	\centering
+	\caption{List of Sample Branched Hydrocarbons}
+	\begin{tabular}{ll}
+		\toprule 
+		Chemical Structure & Nomenclature \\
+		\midrule 
+        \((CH_3)_2CH_2CH_2CH(C_3H_7)CH(C_2H_5)CH(CH_3)_2\) &
+		    3-ethyl-2,7-\textbf{di}methyl-4-\textbf{propyl}oct\textbf{ane} \\
+		\(C(CH_3)_4\) & 
+			2,2-\textbf{di}methyl\textbf{prop}ane (or neopentane) \\
+		
+		\textbf{Nested Structures} & \\
+		\(CH_3(CH_2)_2CH(CH_3)CH(CH(CH_3)_2)(CH_2)_2CH_3\) &
+			4-\textbf{iso}propyl-5-\textbf{methyl}oct\textbf{ane} \\
+		& 4-\textbf{methyl}-5-(1-\textbf{methyl}ethyl)\textbf{oct}ane \\
+    \toprule
+    \end{tabular}
+\end{table}
+
+Branched alkenes and alkynes are marked in a way that the double bond and triple
+bond index is smallest. For example \(CH_2=C(CH_3)CH=CH_2\) is named as \textbf{
+	2-methyl-1,3-butadiene
+}
+
+When the compounds have both double bonds and triple bonds, its name should contain 
+both alkene endings -en and alkyne ending -yne. if there is no ambiguation, one can
+use -enyne instead of the two endings with their positions specified explicitly.
+
+\begin{table}[htbp]
+	\centering
+	\caption{List of Sample Branched Hydrocarbons}
+	\begin{tabular}{ll}
+		\toprule 
+		Chemical Structure & Nomenclature \\
+		\midrule 
+        \(HC\equiv C-CH=CH_2\) & butenyne \\
+		\(CH_3CH=CHC\equiv CH\) & 3-penten-1-yne \\
+    \toprule
+    \end{tabular}
+\end{table}
+
+If the compounds have alicyclic hydrocarbonyl components, other branches should be 
+seen as branched chains, naming before the cyclic hydrocarbons. For example, there
+is a legal name: \textbf{2-methyl-1-(3-methylbutyl)cyclohexane}, which is a derivative
+of cyclohexane.
+
+\section{Aromatic Hydrocarbons}
+
+The basis of aromatic hydrocarbones are \(C_6H_6\) \textbf{Benzene} and other condensed
+aromatic hydrocarbons. \(C_{10}H_8\) \textbf{Naphthalene} \(C_{14}H_{10}\) \textbf{Anthracene}
+These cores are usually placed at the end of the word.
+
+The differences in geometry formed geometric isomerism in aromatic hydrocarbons,
+for example, \(Ph-(CH_3)_3\) has three isomers, \textbf{1,3,5-trimethylbenzene} or 
+para-trimethylbenzene, \textbf{1,2,4-trimethylbenzene} or meta-trimethylbenzene, and
+\textbf{1,2,3-trimethylbenzene} or ortho-trimethylbenzene. (Table 5).
+
+\section{Halogenides}
+
+\begin{table}[htbp]
+	\centering
+	\caption{Halogens}
+	\begin{tabular}{cll}
+		\toprule 
+		Chemical & Halo & Halide \\
+		\midrule 
+        \(F\)  & Fluoro & Fluoride \\
+		\(Cl\) & Chloro & Chloride \\
+		\(Br\) & Bromo & Bromide \\
+		\(I\) & Iodo & Iodide \\
+    \toprule
+    \end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+	\centering
+	\caption{List of Common Names}
+	\begin{tabular}{cl}
+		\toprule 
+		Chemical & Nomenclature \\
+		\midrule 
+        \(CHCl_3\)  & Chloroform \\
+		\(CHBr_3\) & Bromoform \\
+		\(CCl_2F_2\) & Freon \\
+    \toprule
+    \end{tabular}
+\end{table}
+
+See table 10 and 11.
+
+\section{Alcohols and Phenols}
+
+A hydroxyl functional group attached to a chain is called alcohols, and to name it, Put
+an -ol ending to the original name of \textbf{hydrocarbons}, and omit the last letter e if there is any. For
+compounds that have more than one hydroxyl groups, the ending becomes \textbf{-diol},
+\textbf{-triol} and so forth. (Do not omit the e when there are multiple hydroxl groups.)
+
+Phenols are those with hydroxl groups attached directly to an aromatic hydrocarbonyl ring.
+and exceptionally, the simpliest phenol \(Ph-OH\) is nicknamed \textbf{Phenol}, while
+other derivatives are named using the rules above. For example, \(HO-C_6H_4-OH\) is named
+\textbf{Benzenediol}
+
+\textbf{When naming the alcohols, we selects the main chain that:}
+\begin{itemize}
+	\item The hydroxl function group is \textbf{directly linked} to one of the chain's carbons.
+	\item The chain which match the rule above is longest.
+	\item Mark the index of carbons from the hydroxl group.
+\end{itemize}
+
+\begin{table}[htbp]
+	\centering
+	\caption{Alcohols and Phenols}
+	\begin{tabular}{cl}
+		\toprule 
+		Chemical & Nomenclature \\
+		\midrule 
+        \(C(CH_3)_3OH\)  & 2-methyl-2-propanol (derived from \textbf{propane}) \\
+		\(CH_3CH=C(C_2H_5)CH_2OH\) & 2-ethyl-2-butenal \\
+		\(CH_2OH-CHOH-CH_2OH\) & 1,2,3-propanetriol (\textbf{glycerin}) \\
+    \toprule
+    \end{tabular}
+\end{table}
+
+\setchemfig {
+	bond sep = 1.1pt,
+	atom sep = 1.1em,
+	bond style = {line width = 0.5pt}
+}
+
+Notice that if there are more than 3 hydroxyl functional groups, (a chain can have
+at most 2 hydroxyls at both ends) one group must not be in the main chain. For them
+we name it as \textbf{hydroxo-}. For example \(HOCH_2CH_2CH(CH_2OH)CH_2OH\) is named
+as \textbf{2-hydroxomethyl-butanediol} and \tiny
+\chemfig{-[:-30]-[:30](-[:-30]OH)-[:90](-[:30]COOH)-[:150]-[:-150]-[:-90]} \normalsize
+is named as \textbf{2-hydroxo-1-cyclohexane carbonic acid}.
+
+\section{Ethers}
+
+Evaluate the two parts of the ether separated by the atom O, and pick the simplier one
+(usually alkanes), and name it as \textbf{Simplier Part Prefix - oxy Complex Part}.
+For example, compound \(CH_3CH_2OCH=CH_2\) can be expressed as \textbf{ethoxy ethene}.
+and \(CH_3O-Ph\) \textbf{methoxy benzene}.
+
+When one of the parts is cyclic hydrocarbons, and that the ring has less than 5 carbon
+atoms, we can omit the 'yl' ending in the prefix.
+
+\begin{table}[htbp]
+	\centering
+	\caption{Ether Prefix Word}
+	\begin{tabular}{cl}
+		\toprule 
+		Chemical & Nomenclature \\
+		\midrule 
+        \(CH_3CH_2O-\)  & ethoxy \\
+		\chemfig{*4(--(-O-)--)} & cyclobutoxy \\
+		\chemfig{*6(--(-O-)----)} & cyclohex\textbf{yl}oxy \\
+    \toprule
+    \end{tabular}
+\end{table}
+
+Cyclic ethers are named firstly the alkane chain without the ether's oxygen atom,
+and then specify the oxygen atom adding the \textbf{epoxy-} prefix.
+
+\begin{table}[htbp]
+	\centering
+	\caption{Cyclic Ethers}
+	\begin{tabular}{cl}
+		\toprule 
+		Chemical & Nomenclature \\
+		\midrule 
+		\chemfig{*3(-O-(-)-)} & 1,2-epoxypropane \\
+		\chemfig{*4(-O---)} & 1,3-epoxypropane \\
+		\chemfig{*5(-O----)} & 1,4-epoxybutane \textbf{tetrahydrofuran} \\
+    \toprule
+    \end{tabular}
+\end{table}
+
+Note: \textbf{Its index-marking rules are similar to alcohols.}
+
+\section{Carboxylic Acids}
+
+By replacing the last letter e in the corresonding alkanes, alkenes, and alkynes that
+form the main chain, plus \textbf{-oic acid}. For acids that have more than one -COOHs
+change the -oic ending into -dioic, -trioic etc.
+
+Another nomenclature for carboxylic acids are \textbf{Name of Hydrocarbons + 
+[(di, tri, etc)]carboxylic acid}. And many other organic acids have their common names.
+
+\begin{table}[htbp]
+	\centering
+	\caption{Carboxylic Acids}
+	\begin{tabular}{cll}
+		\toprule 
+		Chemical & Chain & Carboxylic Acids \\
+		\midrule 
+		\(CH_3CH=CHCH_2COOH\) & 3-pentene & 3-pentenoic acid \\
+		\(CH_3CH_2CH(COOH)CH_2CH(COOH)CH_3\) & hexane & 2-ethyl-4-methyl-oentanedioic acid \\
+		\chemfig{*6(-=(-COOH)-(-COOH)=-=)} & \normalsize benzene & 1,2-benzene dicarboxylic acid \\
+    \toprule
+    \end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+	\centering
+	\caption{Common Names}
+	\begin{tabular}{cl}
+		\toprule 
+		Chemical & Nomenclature \\
+		\midrule 
+		\(CH_3COOH\) & acetic acid \\
+		\(HCOOH\) & formic acid \\
+		\chemfig{*6(-=(-COOH)-=-=)} & benzoic acid \\
+    \toprule
+    \end{tabular}
+\end{table}
+
+Note: \textbf{Its index-marking rules are similar to alcohols.}
+
+\section{Aldehydes and Ketones}
+
+Replacing the last letter e of the names of hydrocarbons with the same amount of carbon
+atoms with \textbf{-al} ending for aldehydes and \textbf{-one} for ketones.
+
+\begin{table}[htbp]
+	\centering
+	\caption{Naming Aldehydes and Ketones}
+	\begin{tabular}{clcl}
+		\toprule 
+		Hydrocarbons & Name & Aldehydes or Ketones & Name \\
+		\midrule 
+		\(CH_3CH(CH_3)CH3\) & 2-methylpropane & \(CH_3CH(CH_3)CHO\) & 2-methylpropanal \\
+		\(CH_3(CH_2)_3CH_3\) & pentane & \(CH_3CO(CH_2)_2CH_3\) & 2-pantanone \\
+    \toprule
+    \end{tabular}
+\end{table}
+
+There is also a way to name ketones with the \(R_1 - CO - R_2\), for example, 
+\textbf{propantone} can be called \textbf{dimethyl ketone} and \textbf{2-pantanone} 
+\textbf{methyl propyl ketone}.
+
+\section{Esters}
+
+The alcoholic part of the ester is seen as a substituent and end with -yl hydrocarbonyl
+ending, and the acid part replace the \textbf{-ic acid} ending with \textbf{-ate},
+indicating the acid part of a salt. For example, \tiny \chemfig{*6(-=(-COOC_4H_9)-=-=)}
+\normalsize is named as \textbf{Butyl benzoate}
+
+\section{Amines}
+
+For simple amines, consider using a hydrocarbonyl prefix and the -amine ending to name
+the substance. System nomenclature (1) evaluate the longest carbon chain that contains
+the specified nitrigen as main chain. (2) Mark the main carbon chain with smaller
+indices closer to the nitrogen. (3) Naming the branched chain using the carbon index
+and, if directly linked to the nitrogen, use capital letter N. (4) Replace the alkane
+ending -e with -amine.
+
+If there are more than one nitrogen in the compounds, -amine becomes -diamine, -triamine,
+etc.
+
+\begin{table}[htbp]
+	\centering
+	\caption{Sample Amine Names, \textbf{System Names}}
+	\begin{tabular}{cl}
+		\toprule 
+		Chemical & Nomenclature \\
+		\midrule 
+		\((CH_3)_2NH\) & dimethylamine or \textbf{N-methylmethanamine} \\
+		\((CH_3)_3N\) & trimethylamine or \textbf{N,N-dimethylmethanamine} \\
+		\(CH_3(CH_2)_3-N(CH_3)_2\) & \textbf{N,N-dimethylbutanamine} \\
+		\chemfig{*6(-=(-NH_2)-=-=)} & aniline or \textbf{banzenamine} \\
+		\chemfig{*6(-=(-N(-[:30]CH_3)(-CH_2CH_3))-=-(-CH_3)=)} & \textbf{N-ethyl-N,4-dimethyl}benzenamine \\
+    \toprule
+    \end{tabular}
+\end{table}
+
+\section{Nitriles}
+
+\(-CN\) as a maternal body is called \textbf{nitrile}s, while as a substituent is called
+\textbf{cyano-, cyanide}. Firstly, regard the \(-CN\) as \(-COOH\) to name it as an 
+carboxylic acid, then, replace the \textbf{-oic acid} ending with \textbf{-onitrile}.
+For example, \textbf{Benzonic Acid} becomes \textbf{Benzonitrile}.
+
+\section{Organometallic Compounds}
+
+\begin{table}[htbp]
+	\centering
+	\caption{Place Organic Groups Before the Metal Atom}
+	\begin{tabular}{cl}
+		\toprule 
+		Chemical & Nomenclature \\
+		\midrule 
+		\chemfig{CH_3Li} & Methylcopper \\
+		\((C_2H_5)_2Hg\) & Diethylmercury \\
+    \toprule
+    \end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+	\centering
+	\caption{Regard as Derivatives of Borane, Silane and Stannane}
+	\begin{tabular}{cl}
+		\toprule 
+		Chemical & Nomenclature \\
+		\midrule 
+		\((CH_3)_4Si\) & Tetramethyl\textbf{silane} \\
+		\((CH_3)_3SnC_2H_5\) & Ethyltrimethyl\textbf{stanname} \\
+    \toprule
+    \end{tabular}
+\end{table}
+
+For organic salt and positive metal ions, name them as a salt. For example, 
+\(CH_3CH_2HgCl\) is named \textbf{ethylmercury chloride}
+
+\section{Heterocyclic Compounds}
+
+\subsection{System Names for Single Heterocycle}
+
+(1) The suffix of the heterocyclic compounds is determined by the size of the cyclic 
+ring, (2) and the non-carbon atoms that form the heterocycle has special prefixes
+arranged in a certain order (O>S>N). (3) Modify the name ending with the following rules
+
+\begin{itemize}
+	\item If the ring contains \textbf{Nitrogen}, add an -e to the ending.
+	\item If the ring doesn't contain \textbf{Nitrogen}, and is \textbf{saturated}, replace the last letter -e (if any) with -ane.
+	\item If the ring contains \textbf{Nitrogen}, and is \textbf{saturated}, replace the last letter -e(or -ine for -irine, -epine, -ocine) (if any) with -idine.
+	\item If the name contains to adjacent vowels, replace them to the last vowel. 
+\end{itemize}
+
+\begin{table}[htbp]
+	\centering
+	\caption{Cycle Size In Atoms and Corresponding Suffixes}
+	\begin{tabular}{cl}
+		\toprule 
+		Size & Suffix \\
+		\midrule 
+		3 & -irine \\
+		4 & -ete \\
+		5 & -ole \\
+		6 & -in(e) \\
+		7 & -epin(e) \\
+		8 & -ocin(e) \\
+    \toprule
+    \end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+	\centering
+	\caption{Non-carbon Atom Prefix}
+	\begin{tabular}{cl}
+		\toprule 
+		Atom & Prefix \\
+		\midrule 
+		O & oxa- \\
+		S & thia- \\
+		N & aza- \\
+    \toprule
+    \end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+	\centering
+	\caption{Sample Names for Heterocyclic Compounds}
+	\begin{tabular}{cl}
+		\toprule 
+		Structure & Naming \\
+		\midrule 
+		\chemfig{*4(-S-=-)} & \textbf{Naming Process:} \\
+		& Thia-(1) + Ete \\
+		& Thiete \\
+
+		\chemfig{*4(-N=-=)} & Azete \\
+		\chemfig{*5(-O--O-=)} & 1,3-di\textbf{ox}ole \\
+
+		\chemfig{*3(-N--)} & \textbf{Naming Process:} \\
+		& Aza-(1) + Ir(in) + (Nitrogen) (e) + (Saturated) Idine \\
+		& Azairidine \\
+
+		\textbf{Multiple Heteroatoms} & \\
+		\chemfig{*5(-S-N-S-=)} & \textbf{Naming Process} \\
+		& Thia-(1,3) + Aza-(2) + -Ole(5) \\
+		& 1,3,2-Dithiazole \\
+    \toprule
+    \end{tabular}
+\end{table}
+
+\textbf{Hydrogen Indication} Mark out all the saturated carbon (with 2 hydrogen atom).
+These marked indices are call indicating hydrogen. It is expressed using \textbf{Index
+ + H} before the name of the compound.
+
+\begin{table}[htbp]
+	\centering
+	\caption{Sample Names for Indicator Hydrogen}
+	\begin{tabular}{cl}
+		\toprule 
+		Structure & Naming \\
+		\midrule 
+		\chemfig{*5(-N-=-=)} & 1H-Pyrrole \\
+		\chemfig{*5(=N--=-)} & 2H-Pyrrole \\
+		\chemfig{*5(-N=--=)} & 3H-Pyrrole \\
+    \toprule
+    \end{tabular}
+\end{table}
+
+\subsection{Common Names for Heterocycles}
+
+\begin{table}[htbp]
+	\centering
+	\caption{Common Names}
+	\begin{tabular}{cl}
+		\toprule 
+		Structure & Naming \\
+		\midrule 
+		\chemfig{*5(-O-=-=)} & Furan \\
+		\chemfig{*5(-S-=-=)} & Thiophene \\
+		\chemfig{*5(-N-=-=)} & Pyrrole \\
+		\chemfig{*5(-S-=N-=)} & Thiazole \\
+		\chemfig{*5(-N(-H)-=N-=)} & Imidazole \\
+		\chemfig{*6(=N-=-=-)} & Pyridine \\
+		\chemfig{*6(-O-=--=)} & Pyran \\
+		\chemfig{*6(=N-=N-=-)} & Pyrimidine \\
+    \toprule
+    \end{tabular}
+\end{table}
+
+\setchemfig {
+	bond sep = 1.1pt,
+	atom sep = 2em,
+	bond style = {line width = 0.5pt}
+}
+
+\subsection{Common Names for Condensed Heterocyclic Compounds}
+
+Nearly all of the condensed heterocyclic compounds have a common names, and the
+table demonstrates some of the most commonly used compounds.
+
+\begin{table}[htbp]
+	\centering
+	\caption{Common Names for Condensed Heterocyclic Compounds}
+	\begin{tabular}{cl}
+		\toprule 
+		Molecule & Name \\
+		\midrule 
+		\chemfig{*6(=-(*5(-O-=--))=-=-)} & Benzofuran \\
+		\chemfig{*6(=-(*5(-S-=--))=-=-)} & Benzothiophene \\
+		\chemfig{*6(=-(*5(-N(-H)-=--))=-=-)} & Indole \\
+		\chemfig{*6(=-(*6(-N=-=-=))=-=-)} & Quinoline \\
+		\chemfig{*6(=-(*6(-=N-=-=))=-=-)} & Isoquinoline \\
+    \toprule
+    \end{tabular}
+\end{table}
+
+\subsection{Condensed Heterocyclic Compounds Nomenclatures}
+
+\textbf{Step 1: Marking the Edge and Atoms in the Heterocycle} Every condense heterocycle
+can be splitted into many small unit cycles. The first step of expressing the whole is
+to express all of the subunits to mark the relative position in which they stack. The 
+marking should follow these rules:
+
+\textbf{Rules to Determine Indices}
+
+\begin{itemize}
+	\item Make the indices of all hetero-atoms the \textbf{smallest}.
+	\item The carbon with no hydrogen should't be assigned with an index, assign them the previous instead with mark a,b,etc. instead. For example, 1-2-3-3a-3b-4.
+	\item Among all the circumstances that match the first rule, try to make those carbons with no hydrogen's indices the \textbf{smallest}.
+	\item Among all the circumstances that match the rule 1 and 3, try to make the indices of all the indication hydrogen the \textbf{smallest}.
+	\item Priority: O, S, NH, N
+	\item Assign the index (a, b, c, etc) of the line contours of the heterocycle according to the indices of atoms.  
+\end{itemize}
+
+\begin{table}[htbp]
+	\centering
+	\caption{Step 1: Rule 1}
+	\begin{tabular}{cc}
+		\toprule 
+		Correct & Wrong \\
+		\midrule 
+		\chemfig{*4(_4-N_1-_2-_3-)} & \chemfig{*4(_1-N_4-_3-_2-)} \\
+		Nitrogen has the smallest index 1 & \\
+    \toprule
+    \end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+	\centering
+	\caption{Step 1: Rule 2 and Rule 3}
+	\begin{tabular}{cc}
+		\toprule 
+		Correct & Wrong \\
+		\midrule 
+		\chemfig{*6(N_4=3-2=N_1-N_8(*5(N_8-7=6-N_5=4a-))-4a-)} &
+		\chemfig{*6(N_1=2-3=N_4-N_5(*5(N_5-6=7-N_8=8a-))-8a-)} or 
+		\chemfig{*6(N_8=7-6=N_5-N_4(*5(N_4-3=2-N_1=8a-))-8a-)} \\
+		4a is smaller than 8a & \\
+    \toprule
+    \end{tabular}
+\end{table}
+
+\textbf{Step 2: Determine the Fundamental Ring} Among all the subunits of the heterocycle,
+select the one which matched the following rules as the fundamental ring.
+
+\textbf{Rules to Determine Fundamental Ring}
+
+\begin{itemize}
+	\item If the subunit rings contains both aromatic rings and heterotic rings, consider the \textbf{heterotic ring} as the fundamental ring. If there are more than one heterotic rings, choose the \textbf{larger one} or \textbf{with a special name}.
+	\item If the subunit rings contains only heterotic rings, choose the \textbf{larger ring}.
+	\item If the size of the rings are identical, choose the one with \textbf{most heterotic atom}.
+	\item If the number of heterotic atoms are identical, choose the one with \textbf{maximum types of atoms}.
+	\item If all of these are identical, choose the one with \textbf{smallest indices} of heterotic atoms.
+	\item In the naming of each subunits, treat the shared heterotic atom as their own.
+\end{itemize}
+
+\textbf{Step 3: Naming} Now that we acquire all the subunit rings and their right sequences
+of indices and contours, we can name it using relative positioning, in a bracket, first
+sign the arrangement of the shared contour, than the line specified by a small letter.
+[3,2-b] is a legal notation. However, [3,2-b] and [2,3-b] is not the same. [3,2] specifies
+a contour of additional ring, and b specifies a contour of fundamental ring.
+
+\begin{table}[htbp]
+	\centering
+	\caption{The Naming Process of a Condensed Ring}
+	\begin{tabular}{cl}
+		\toprule 
+		Target Molecule &  \chemfig{*5(-S-(*5(=N-=-N-))-N-=)} \\
+		\midrule 
+		& \textbf{Naming Each Subunits} \\
+		\chemfig{*5(-S-=N-=)} & Thiazole (Fundamental Ring) \\
+		\chemfig{*5(=N-=-N(-H)-)} & 1H-1,3-Diazole, Imidazole (Additional Ring) \\
+
+		& \textbf{Marking the Index Of Subunits} \\
+		\chemfig{*5(5-S_1-2=N_3-4=)} & \\
+		\chemfig{*5(2=N_3-4=5-N_1(-H)-)} & \\
+
+		& \textbf{Naming the Compound} \\
+		\chemfig{*5(-S-(*5(=N-=-N-))-N-=)} & Imidazo[2,1-b]thiazole \\
+    \toprule
+    \end{tabular}
+\end{table}
+
+\setchemfig {
+	bond sep = 1.1pt,
+	atom sep = 1.1em,
+	bond style = {line width = 0.5pt}
+}
+
+\section{Common Functional Groups}
+
+\begin{table}[htbp]
+	\centering
+	\caption{List of Functional Groups}
+	\begin{tabular}{ccc}
+		\toprule 
+		Chemical Structure & Prefixes & Suffixes \\
+		\midrule 
+        \(-COOH\) & carboxy & -carboxylic acid, oic acid \\
+        \(-SO_3H\) & sulfo & -sulfolic acid \\
+		\(-COOR\) & R-oxycarbonyl & R...carboxylate, R...oate \\
+		\(-COX\) & halocarbonyl & -carbonyl halide, -oyl halide \\
+		\(-CONH_2\) & carbamoyl & -carboxamide, -amide \\
+		\(-CN\) & cyano & -carbonitrile, -nitrile \\
+		\(-CHO\) & formyl & -carbaldehyde, -al \\
+		\(-CO\) & oxo & -one \\
+		\(-OH\) & hydroxy & -ol \\
+		        & & (phen)-ol \\
+	    \(-NH_2\) & amino & -amine \\
+		\(-OR\) & R-oxy & -ether \\
+		\(-R\) & alkyl & \\
+		\(-X\) & halo & \\
+		\(-NO_2\) & nitro & \\
+		\(-NO\) & nitriso & \\
+    \toprule
+    \end{tabular}
+\end{table}
+
+\textbf{The precedence of organic functional groups} should be considered when there
+are multiple different groups in a compound. the topmost functional group should be 
+regarded as the maternal body while the less precedent groups be substituents.
+
+\begin{table}[htbp]
+	\centering
+	\caption{Precedence of Common Functional Groups}
+	\begin{tabular}{cl}
+		\toprule 
+		Chemical & Nomenclature \\
+		\midrule 
+		\textbf{Higher Precedence} & \\
+		\chemfig{-COOH} & Carboxylic Acids \\
+		\chemfig{-SO_3H} & Sulfuric Acids \\
+		\chemfig{-COOR} & Esters \\
+		\chemfig{-COX} & Carbonyl Halides \\
+		\chemfig{-CONH_2} & Carboxamides \\
+		\chemfig{-CN} & Nitriles \\
+		\chemfig{-CHO} & Aldehydes \\
+		\chemfig{O=C(-[:60])(-[:-60])} & Ketones \\
+		\chemfig{-OH} & Alcohols and Phenols \\
+		\chemfig{-NH_2} & Amines \\
+		\chemfig{*6(-=-=-=)} & Aromatic Rings \\
+		\chemfig{-C~C-} & Alkynes \\
+		\chemfig{-C=C-} & Alkenes \\ 
+		\chemfig{-O-} & Ethers \\
+		\chemfig{R} & Alkanes \\
+		\chemfig{-X} & Halogens \\
+		\chemfig{-NO_2} & Nitro \\
+		\textbf{Lower Precedence} & \\
+    \toprule
+    \end{tabular}
+\end{table}
+
+\end{document}
