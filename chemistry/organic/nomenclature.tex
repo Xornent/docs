@@ -1,4 +1,4 @@
-% !TEX TS-program = pdflatex
+% !TEX TS-program = xelatex
 % !TEX encoding = UTF-8 Unicode
 
 % This is a simple template for a LaTeX document using the "article" class.
@@ -64,9 +64,9 @@
 \title{\textbf{ 
   Nomenclature of Organic Compounds
   }}
-\author{\emph{@yang-z}}
-\date{} % Activate to display a given date or no date (if empty),
-        % otherwise the current date is printed 
+\author{\emph{@yang-z} Revision 2}
+% \date{} % Activate to display a given date or no date (if empty),
+          % otherwise the current date is printed 
 
 \begin{document}
 \maketitle
@@ -74,9 +74,14 @@
 
 \section{Contribution}
 
-This document is licensed under \textbf{GPLv3}. And is compiled with \textbf{MikTeX}.
+This document is licensed under \textbf{GPLv3}. And is compiled with \textbf{TexLive}.
 The source code is avaliable on https://github.com/xornent/docs/ location \textbf{chem.org/nomenclature}.
 Contribution to the document and error report by \textbf{Issues} are welcomed.
+
+Install TexLive parameters
+\ttfamily
+apt-get install: texlive-latex-base latex-cjk-all texlive-latex-extra
+\rmfamily
 
 \section{Number Prefix}
 
@@ -219,11 +224,55 @@ alkenes and alkynes have suffixes like \textbf{Universal Number Prefix (Mono omi
     \end{tabular}
 \end{table}
 
+\setchemfig {
+	bond sep = 1.1pt,
+	atom sep = 1.1em,
+	bond style = {line width = 0.5pt}
+}
+
+\subsubsection{Chirality Isomerism}
+
+Given that a carbon atom is connected to four groups of atom \(R_1, R_2, R_3, R_4\). 
+The chilarity of that carbon is determined using the following technique.
+
+\begin{itemize}
+	\item If none of the groups are identical, the carbon is chiral carbon atoms, otherwise it is not.
+	\item Look at the carbon atom in a position that the smallest of the four groups is hidden from you, and you are faced with three groups.
+	\item Make an arrangement according to the size of the three groups, count them from the largest to the smallest. If the sequence is \textbf{clockwise}, the carbon is a \textbf{R}(rectus) carbon, if \textbf{counterclockwise}, \textbf{S}(sinister) carbon.
+\end{itemize}
+
+It is essential to know the relative size of each functional group, it is assessed and
+compared using the \textbf{Cahn-Ingold-Prelog Sequence Rule}. This rule is rather
+complex in order to achieve completeness and correctness, you can see Common Functional
+Group Section for a brief introduction of this rule.
+
+\subsubsection{Geometry Isomerism of Ethenes}
+
+Arrange the two groups connecting to the either side of the ethene C=C, if the two larger
+ones are at the same side of linear core, they are called \textbf{Z}(zusamman) isomers,
+otherwise, they are called \textbf{E}(entgegen) isomers.
+
+They are marked in the beginning of the name, using Z-n-nomenclature, E-n-nomenclature, or
+(nZ,mZ, ... ,kE,pE, ...)-nomenclature. For example, butene has two isomers \textbf{Z-2-butane}, \textbf{E-2-butane}
+
 \subsection{Alicyclic Hydrocarbons}
 
 Alicyclic hydrocarbons are named with prefix cyclo- plus the name of the corresponding
 acyclic hydrocarbons. For example, \(C_{6}H_{14}\) \textbf{Hexane} becomes
 \(C_{6}H_{12}\) \textbf{Cyclohexane}.
+
+\subsubsection{Geometry Isomerism of Alicyclic Hydrocarbons}
+
+If the molecule has symmetrical properties over an axis, simply name the geometry isomer
+by \textbf{cis} and \textbf{trans} prefix, otherwise, specify all the chiral carbon atoms
+using its index and \textbf{R/S} types.
+
+For example, \chemfig{*3((-H_3C)(-H)-(-CH_3)(-[:60]H)<>)} \textbf{cis-1,2-dimethylcyclopropane} or 
+\textbf{(1S,2R)-1,2- dimethylcyclopropane}.
+
+\chemfig{*3((-H_3C)(-H)-(-[:60]CH_3)(-H)<>)} \textbf{(1R,2R)-1,2-dimethylcyclopropane}.
+
+\chemfig{*3((-H)(-H_3C)-(-[:60]H)(-CH_3)<>)} \textbf{(1S,2S)-1,2-dimethylcyclopropane}.
 
 \subsection{Hydrocarbons as Functional Groups}
 
@@ -233,6 +282,18 @@ groups, and to express hydrocarbons with branched chains. For example, \(CH_{4}\
 becomes \(CH_2=CH-\) \textbf{Ethenyl}, and \textbf{-yne} becomes \textbf{-ynyl}.
 
 \subsection{Hydrocarbons with Branched Chains}
+
+One can name the hydrocarbons with the following rules to name and arrange the branched
+chains. Note that the rules must be applied in specified order.
+
+\begin{itemize}
+	\item \textbf{Step I} Find the longest chain of the hydrocarbon.
+	\item \textbf{Step II} If there are more than one chain that has the maximal length, choose the one with most branch chains.
+	\item \textbf{Step III} Mark the index from the either end of the chain, and picks out the indices that the branch chains link. These mark sequence should \dots
+	\item \textbf{Step IV} Select the marking method that makes the first index smallest.
+	\item \textbf{Rule V} If the first index is identical, select that makes the second index smallest.
+	\item \textbf{Rule VI} If all are identical, arrange the names of each substituent, and make the first one in alphabetical order the smallest.
+\end{itemize}
 
 Make the longest branch as the main chain, and to choose the orientation to mark The
 index of carbons in the main chain, which makes the sum of all branched chain index
@@ -292,7 +353,7 @@ of cyclohexane.
 
 \section{Aromatic Hydrocarbons}
 
-The basis of aromatic hydrocarbones are \(C_6H_6\) \textbf{Benzene} and other condensed
+The basis of aromatic hydrocarbons are \(C_6H_6\) \textbf{Benzene} and other condensed
 aromatic hydrocarbons. \(C_{10}H_8\) \textbf{Naphthalene} \(C_{14}H_{10}\) \textbf{Anthracene}
 These cores are usually placed at the end of the word.
 
@@ -305,7 +366,7 @@ para-trimethylbenzene, \textbf{1,2,4-trimethylbenzene} or meta-trimethylbenzene,
 
 \begin{table}[htbp]
 	\centering
-	\caption{Halogens}
+	\caption{Halogens and Halides}
 	\begin{tabular}{cll}
 		\toprule 
 		Chemical & Halo & Halide \\
@@ -332,7 +393,11 @@ para-trimethylbenzene, \textbf{1,2,4-trimethylbenzene} or meta-trimethylbenzene,
     \end{tabular}
 \end{table}
 
-See table 10 and 11.
+The table \textbf{Halogens and Halides} and \textbf{List of Common Names} of halogenides listed some
+basic naming principles, in another circumstance, the halogen atom replace the groups directly
+linked to a carbonyl group. \chemfig{C(=[:90]O)(-[:-30])(-[:-150])}. They are regarded as
+a derivative of carboxylic acids, and are named by replacing the \textbf{-ic acid} ending to
+\textbf{-yl halide}. For example \textbf{Propanoic acid} became \textbf{Propanoyl chloride}.
 
 \section{Alcohols and Phenols}
 
@@ -366,12 +431,6 @@ other derivatives are named using the rules above. For example, \(HO-C_6H_4-OH\)
     \toprule
     \end{tabular}
 \end{table}
-
-\setchemfig {
-	bond sep = 1.1pt,
-	atom sep = 1.1em,
-	bond style = {line width = 0.5pt}
-}
 
 Notice that if there are more than 3 hydroxyl functional groups, (a chain can have
 at most 2 hydroxyls at both ends) one group must not be in the main chain. For them
@@ -460,12 +519,25 @@ Another nomenclature for carboxylic acids are \textbf{Name of Hydrocarbons +
     \end{tabular}
 \end{table}
 
+Several generic types of organic compounds are seen as derivatives of carboxylic acids. And they
+are named by replacing part of the acid ending into their own suffixes. They include 
+\textbf{Nitriles}, \textbf{Amides}, \textbf{Halocarbonyls} and \textbf{Anhydrates}. Nitriles are
+compounds that replace the -COOR group into -CN group, and is named by replacing \textbf{-ic acid}
+into \textbf{-nitrile}. \emph{However, it seems that -anenitrile and -anonitrile are both acceptable.}
+Amides are nitrigen based groups connected directly to the carbonyl, and are named by replacing
+\textbf{-oic acid} into \textbf{-amide}. Halocarbonyls are halogens directly connected to carbonyl and
+named by replacing \textbf{-ic acid} into \textbf{-yl halide}. Anhydrates are two carboxylic acid
+eliminated by a water molecule, (\chemfig{-[:30](=[:90]O)(-[:-30]OH)} becames \chemfig{-[:30](=[:90]O)(-[:-30]O-[:30](=[:90]O)(-[:-30]))})
+named by replacing \textbf{acid} to \textbf{anhydrate}. The example molecule is \textbf{Ethanoic Anhydrate, Acetic Anhydrate}.
+
 Note: \textbf{Its index-marking rules are similar to alcohols.}
 
 \section{Aldehydes and Ketones}
 
 Replacing the last letter e of the names of hydrocarbons with the same amount of carbon
 atoms with \textbf{-al} ending for aldehydes and \textbf{-one} for ketones.
+For more complexed aldehydes, use the name for the corresponding carboxylic acids and 
+replace the \textbf{-ic acid} ending with \textbf{-aldehyde}. 
 
 \begin{table}[htbp]
 	\centering
@@ -482,7 +554,9 @@ atoms with \textbf{-al} ending for aldehydes and \textbf{-one} for ketones.
 
 There is also a way to name ketones with the \(R_1 - CO - R_2\), for example, 
 \textbf{propantone} can be called \textbf{dimethyl ketone} and \textbf{2-pantanone} 
-\textbf{methyl propyl ketone}.
+\textbf{methyl propyl ketone}. For ketones directly connected to benzene, \chemfig{*6(-=(-COR)-=-=)}
+you should find out the name of the carboxylic acid \(RCOOH\) and replace the \textbf{-oic acid}
+ending with \textbf{-ophenone}
 
 \section{Esters}
 
@@ -501,7 +575,7 @@ and, if directly linked to the nitrogen, use capital letter N. (4) Replace the a
 ending -e with -amine.
 
 If there are more than one nitrogen in the compounds, -amine becomes -diamine, -triamine,
-etc.
+etc. For amides, see Carboxylic Acid section.
 
 \begin{table}[htbp]
 	\centering
@@ -820,6 +894,27 @@ a contour of additional ring, and b specifies a contour of fundamental ring.
 \textbf{The precedence of organic functional groups} should be considered when there
 are multiple different groups in a compound. the topmost functional group should be 
 regarded as the maternal body while the less precedent groups be substituents.
+
+\textbf{Cahn-Ingold-Prelog Sequence Rule} Here we introduce a simplified version of
+the sequence rule to arrange the relative size of different functional groups.
+
+\textbf{Rule I} The sequence of common atoms used in organic compounds is listed in
+descending order of size. \textbf{I, Br, Cl, S, P, F, O, N, C, D, H, $\emptyset$}.
+
+\textbf{Rule II} Given that a functional group has only one atom that are directly
+connected. We start from that atom, and express all the atoms that are directly 
+connected to it in descending size order. This forms a triary tree structure. For
+example, \(-CH_3\) is expressed as C(H,H,H) and \(-CHFCl\) is expressed as C(Cl,F,H).
+If the atom has double bond or triple bond to connect with an atom, if is regarded 
+as two or three identical bond to the atom. For example, \(-CHO\) is expressed as C(O,O,H).
+If the saturate bond is less than four(for non-carbon center atoms), we fill the
+tree with empty imagery atoms. \(-OH\) is expressed as O(H,$\emptyset$,$\emptyset$).
+
+\textbf{Rule III} If a single atom cannot get the sequential result of the groups,
+you should extnds to the atom that follows. however, the imagery atoms, and those
+atoms considered by equivalating double or triple bonds should be regarded as naked
+atoms without further branch (to avoid iteration hell). \(-CN\) is regarded as 
+C(N([C],[C],$\emptyset$),[N],[N]), \chemfig{*6(-=-(-)=-=)} is regarded as C(C(H,C,[C]),[C],C(H,C,[C]))
 
 \begin{table}[htbp]
 	\centering
